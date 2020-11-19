@@ -1,10 +1,11 @@
 {
   "name": "@hailin_yin/react-youtube",
-  "version": "1.0.0",
+  "version": "1.0.0-semantic-release",
   "description": "React.js powered YouTube player component",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "index.d.ts",
+  "private": false,
   "files": [
     "dist",
     "index.d.ts"
