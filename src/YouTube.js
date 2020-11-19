@@ -190,11 +190,11 @@ class YouTube extends React.Component {
     };
     this.internalPlayer = youTubePlayer(this.container, playerOpts);
     // attach event handlers
-    this.internalPlayer.on('ready', this.onPlayerReady);
-    this.internalPlayer.on('error', this.onPlayerError);
-    this.internalPlayer.on('stateChange', this.onPlayerStateChange);
-    this.internalPlayer.on('playbackRateChange', this.onPlayerPlaybackRateChange);
-    this.internalPlayer.on('playbackQualityChange', this.onPlayerPlaybackQualityChange);
+    this.internalPlayer.on('ready', this.onPlayerReady, { passive: true });
+    this.internalPlayer.on('error', this.onPlayerError, { passive: true });
+    this.internalPlayer.on('stateChange', this.onPlayerStateChange, { passive: true });
+    this.internalPlayer.on('playbackRateChange', this.onPlayerPlaybackRateChange, { passive: true });
+    this.internalPlayer.on('playbackQualityChange', this.onPlayerPlaybackQualityChange, { passive: true });
   };
 
   /**
